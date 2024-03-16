@@ -1,36 +1,22 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { likes } from './likes/data'
+import { AcademicCapIcon } from '@heroicons/react/16/solid'
+import Header from './components/Header'
+import Mouse from './components/Mouse'
+
 
 export default function Page() {
   return (
     <>
-      <header className="flex font-bold">
-        <h1 className="fixed border-b-2 border-b-black/70 text-lg">Mitsutoshi Sato</h1>
-        <ul className="fixed right-16 top-20 ml-auto flex gap-6">
-          <li className="border-b-2 border-b-black/70 hover:opacity-70"><Link href="#work">Works</Link></li>
-          <li className="border-b-2 border-b-black/70 hover:opacity-70"><Link href="#about">About</Link></li>
-          <li className="border-b-2 border-b-black/70 hover:opacity-70"><Link href="#contact">Contact</Link></li>
-        </ul>
-      </header>
-      <main>
-        <h1 className="mt-40 text-7xl leading-[88px]">Design &<br/> Front-End<br/> Developer</h1>
-        <div id="work"></div>
-        <ul className="mt-28 grid grid-cols-2 gap-16">
-          {likes.map((like) => {
-            return (
-              <li key={like.name}>
-                <Link href={`${like.link}`}>
-                    <div className="rounded-2xl bg-stone-200 px-6 py-8">
-                      <p className="  text-4xl">{like.name}</p>
-                      <p className="ml-28 mt-8 text-lg">{like.comment}</p>
-                    </div>
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
-        <h2 className="mt-36 border-b-2 border-b-black/70 pb-4 text-6xl" id="about">About</h2>
+      <div className="relative overflow-hidden">
+        <img src="pc.jpg" className="h-[600px] w-full object-cover"/>
+        <div className="absolute inset-0 bg-black opacity-25"/>
+        <div className="absolute left-[200px] top-[200px] text-[6.8vw] leading-[7vw] text-white/90 opacity-70">Design &<br/> Front-End<br/> Developer</div>
+      </div>
+      <div className="mx-auto w-[calc(100%-400px)]">
+        <p className="mt-8 text-center text-[5vw] font-semibold">Works</p>
+        <Mouse />
+        <p className="mt-36 border-b-2 border-b-black/70 pb-4 text-6xl" id="about">About</p>
         <div className="mt-12 flex leading-8">
           <p className="ml-10">
             【経歴】<br/>
@@ -56,15 +42,16 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <h2 className="mt-36 border-b-2 border-b-black pb-4 text-6xl" id="contact">Contact</h2>
-          <p className="ml-10 mt-10">ご依頼等、お気軽にお待ちしております！</p>
-          <button className="ml-10 mt-4 flex gap-1 rounded-md border-2 border-black/70 px-1 py-2">
-            <p>Send Mail</p>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-            </svg>
-          </button>
-      </main>
+        <p className="mt-36 border-b-2 border-b-black pb-4 text-6xl" id="contact">Contact</p>
+        <p className="ml-10 mt-10">ご依頼等、お気軽にお待ちしております！</p>
+        <button className="ml-10 mt-4 flex gap-1 rounded-md border-2 border-black/70 px-1 py-2">
+          <p>Send Mail</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+          </svg>
+        </button>
+      </div>
+      <Header />
     </>
   )
 }
