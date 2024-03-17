@@ -1,6 +1,4 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { AcademicCapIcon } from '@heroicons/react/16/solid'
+
 import Header from './components/Header'
 import Mouse from './components/Mouse'
 
