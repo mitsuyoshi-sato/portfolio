@@ -17,3 +17,8 @@ body{
 .font-1 {
   color:#b86231
 }
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
