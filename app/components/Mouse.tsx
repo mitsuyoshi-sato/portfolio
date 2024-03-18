@@ -29,7 +29,7 @@ export default function Mouse() {
     <ul className="mt-6 grid-cols-2 gap-4 lg:grid">
       <li>
         <Link href="https://tamago-project.vercel.app/">
-          <div ref={divRef} className="cont mx-auto w-[80%] max-w-[600px] rounded-lg p-8 lg:h-[200px] lg:w-auto">
+          <div ref={divRef} className="cont max-w-[600px] rounded-lg p-8 lg:h-[200px] lg:w-auto">
             <p className="mt-3 opacity-70">April 2022</p>
             <p className="mt-1 text-[18px]">金の卵株式会社</p>
             <p className="mt-3 opacity-70">2022年4月、金の卵株式会社のホームページを作成しました。</p>
@@ -43,7 +43,7 @@ export default function Mouse() {
       </li>
       <li className="mt-10 lg:mt-0">
         <Link href="">
-          <div ref={divRef} className="cont mx-auto w-[80%] max-w-[600px] rounded-lg p-8 lg:h-[200px] lg:w-auto">
+          <div ref={divRef} className="cont max-w-[600px] rounded-lg p-8 lg:h-[200px] lg:w-auto">
             <p className="mt-3 opacity-70">Coming Soon...</p>
             <p className="mt-1 text-[18px]">Port Forio Tool</p>
             <p className="mt-3 opacity-70">誰でも簡単にポートフォリオが作成できる便利なツールを作成しております。近日公開予定。</p>
