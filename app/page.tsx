@@ -1,4 +1,3 @@
-
 import { RocketLaunchIcon, ShareIcon } from '@heroicons/react/16/solid'
 import Header from './components/Header'
 import PcImage from './components/PcImage'
@@ -17,14 +16,14 @@ export default function Page() {
   return (
     <>
       <PcImage />
-      <p className="mx-auto mt-24 w-[165px] min-w-[165px] border-b-2 border-b-[#aa8875] pb-2 text-6xl lg:mt-36 lg:w-[80%]" id="about">Works</p>
+      <p id="work" className="mx-auto mt-24 w-[165px] min-w-[165px] border-b-2 border-b-[#aa8875] pb-2 text-6xl lg:mt-36 lg:w-[80%]">Works</p>
         <div className="mx-auto mt-14 w-[80%] lg:flex lg:space-x-[5%]">
           {works.map((l) => (
             <Work key={l.href} date={l.date} title={l.title} caption={l.caption} href={l.href} src={l.src}/>
           ))}
         </div>
-        <p className="mx-auto mt-24 w-[160px] min-w-[160px] border-b-2 border-b-[#aa8875] pb-2 text-6xl lg:mt-36 lg:w-[80%]" >About</p>
-        <div className="mx-auto mt-12 w-[80%] leading-8 lg:flex">
+        <p className="mx-auto mt-24 w-[160px] min-w-[160px] border-b-2 border-b-[#aa8875] pb-2 text-6xl lg:mt-36 lg:w-[80%]">About</p>
+        <div id="about" className="mx-auto mt-12 w-[80%] leading-8 lg:flex">
           <p>
             【経歴】<br/>
             ・2021年から個人事業主として活動開始。<br/>
@@ -37,7 +36,7 @@ export default function Page() {
               ・Next.js (Rreact) を使用したwebサイト制作。<br/>
               ・HTML CSS JavaScriptを使用したwebサイト制作。
             </p>
-            <p id="about" className="mt-10 lg:mt-6">
+            <p className="mt-10 lg:mt-6">
             【使用言語】<br/>
               ・HTML
               ・CSS

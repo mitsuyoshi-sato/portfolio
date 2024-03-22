@@ -2,7 +2,6 @@
 
 import { ArrowLongRightIcon, RocketLaunchIcon, } from "@heroicons/react/16/solid";
 import clsx from "clsx";
-import Link from 'next/link'
 import { useState } from "react";
 export default function Header(){
   const mbMenuList = [
@@ -16,7 +15,12 @@ export default function Header(){
     setOpen(!open)
   }
 
-
+  const handleScrollTo = (ref: string) => {
+    const element = document.querySelector(ref);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center', });
+    }
+  }
 
   return(
     <>
@@ -28,10 +32,10 @@ export default function Header(){
         </div>
         <div className="hidden md:block">
           <ul className="mr-8 flex gap-12">
-            <li className="tracking-widest hover:opacity-70"><Link href="#work">Works</Link></li>
-            <li className="tracking-widest hover:opacity-70"><Link href="#about">About</Link></li>
-            <li className="tracking-widest hover:opacity-70"><Link href="#blog">Blog</Link></li>
-            <li className="tracking-widest hover:opacity-70"><Link href="#contact">Contact</Link></li>
+            <li className="cursor-pointer tracking-widest hover:opacity-70" onClick={() => handleScrollTo('#work')}>Works</li>
+            <li className="cursor-pointer tracking-widest hover:opacity-70" onClick={() => handleScrollTo('#about')}>About</li>
+            <li className="cursor-pointer tracking-widest hover:opacity-70" onClick={() => handleScrollTo('#blog')}>Blog</li>
+            <li className="cursor-pointer tracking-widest hover:opacity-70" onClick={() => handleScrollTo('#contact')}>Contact</li>
           </ul>
         </div>
 
@@ -53,6 +57,7 @@ export default function Header(){
         {mbMenuList.map((menu, index) => {
           return (
           <li
+            onClick={() => handleScrollTo(menu.ref)}
             key={menu.name}
             className={clsx(
               'mt-4 flex cursor-pointer pb-3 text-xl font-bold text-[#aa8875]',
@@ -64,7 +69,7 @@ export default function Header(){
               }
             )}
           >
-            <Link href={menu.ref}>{menu.name}</Link>
+            {menu.name}
             <ArrowLongRightIcon className="ml-auto w-8 text-[#aa8875]" />
           </li>
           )
