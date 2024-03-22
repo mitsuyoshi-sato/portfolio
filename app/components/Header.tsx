@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowLongRightIcon, ShareIcon } from "@heroicons/react/16/solid";
+import { ArrowLongRightIcon, RocketLaunchIcon, } from "@heroicons/react/16/solid";
 import clsx from "clsx";
 import Link from 'next/link'
 import { useState } from "react";
@@ -23,8 +23,8 @@ export default function Header(){
       {/* pc版 */}
       <div className="cont fixed top-0 flex h-14 w-[100%] items-center justify-between">
         <div className="ml-5 flex items-center gap-3">
-          <ShareIcon className="font-1 h-8 w-5"/>
-          <div className="font-1 z-20 text-2xl tracking-widest">Mitsutoshi Sato</div>
+          <RocketLaunchIcon className="h-8 w-5"/>
+          <div className="z-20 text-2xl tracking-widest">Mitsutoshi Sato</div>
         </div>
         <div className="hidden md:block">
           <ul className="mr-8 flex gap-12">
