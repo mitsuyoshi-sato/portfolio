@@ -42,7 +42,7 @@ export default function Header(){
       {/* スマホ版 */}
       <nav
         className={clsx(
-          'z-0 block h-auto w-[500px] bg-[#282420] px-24 pb-16 pt-6 opacity-90 duration-700 md:hidden',
+          'cont z-0 block h-auto w-[500px] px-24 pb-16 pt-6 opacity-90 duration-700 md:hidden',
           {
             'fixed -top-[800px] right-0': !open,
             'fixed top-14 right-0': open,

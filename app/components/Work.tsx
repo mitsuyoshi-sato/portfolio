@@ -41,7 +41,7 @@ export const Work = (props: WorkType) => {
       <Link
         href={props.href}
         ref={linkRef}
-        className="relative mx-auto mt-6 block h-[200px] w-[400px] max-w-[600px] rounded-lg bg-[#282420] px-5 py-6 lg:w-auto lg:min-w-[400px]"
+        className="relative mx-auto mt-6 block h-[200px] w-[400px] max-w-[600px] rounded-lg bg-[#e9e6e5] px-5 py-6 text-[#8f6a55] lg:w-auto lg:min-w-[400px]"
       >
         <p className="mt-3 opacity-70">{props.date}</p>
         <p className="mt-1 text-[18px]">{props.title}</p>

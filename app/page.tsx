@@ -48,7 +48,7 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <div className="mt-24 h-auto w-full bg-[#282420] pt-14">
+        <div className="cont mt-24 h-auto w-full pt-14">
           <p className="mx-auto mt-9 w-[200px] min-w-[200px] border-b-2 border-b-[#aa8875] pb-2 text-6xl lg:w-[80%]">Contact</p>
           <div className="mx-auto mt-6 h-24 w-[80%] items-center gap-1 lg:mt-0 lg:flex lg:justify-start">
             <button className="mx-auto flex gap-1 rounded-md border-2 border-[#aa8875] px-1 py-2 duration-300 hover:bg-[#aa8875] hover:text-[#282420] lg:mx-0">
